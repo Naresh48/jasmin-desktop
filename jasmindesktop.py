@@ -60,13 +60,12 @@ def sendemail(to, content):#smtp=simple mail transfer protocol
     server = smtplib.SMTP('smtp.gmail.com', 587)#select server and port
     server.ehlo()
     server.starttls()#this command tells that email client running in web browser wants to turn on exsisting insecure connection into a secure one on this server.
-    server.login('jasminmakwana69@gmail.com', 'Jasmin@13')
+    server.login('jasminmakwana69@gmail.com', 'password')
     server.sendmail('jasminmakwana69@gmail.com', to, content)
     server.close()
 
 mail = {'nikit': 'nikitmakwana08@gmail.com',#dictionary of names and thier email ids.
-        'ronak': 'makwanaronak72@gmail.com',
-        'het': 'your email id'}#no.of names and their email ids
+        'your name': 'your email id'}#no.of names and their email ids
 
 
 
@@ -185,7 +184,7 @@ if __name__=="__main__":#main function
                     os.startfile(os.path.join(music_dir, songs[6]))
 
             if 'party' in tp:
-                music_dir = 'F:\music\party'
+                music_dir = 'path'
                 songs = os.listdir(music_dir)
                 print(songs)
                 select = random.randint(1, 6)
@@ -208,7 +207,7 @@ if __name__=="__main__":#main function
                     os.startfile(os.path.join(music_dir, songs[5]))
 
             if 'english' in tp:
-                music_dir = 'F:\music\english'
+                music_dir = 'path'
                 songs = os.listdir(music_dir)
                 print(songs)
                 select = random.randint(1, 6)
@@ -245,12 +244,8 @@ if __name__=="__main__":#main function
                     to = mail['nikit']#to is already in string
                     print(to)
 
-                elif endto == 'het':
-                    to = mail['het']
-                    print(to)
-
-                elif endto == 'ron':
-                    to = mail['ronak']
+                elif endto == 'your name':
+                    to = mail['your name']
                     print(to)
 
                 else:
@@ -275,24 +270,7 @@ if __name__=="__main__":#main function
                 time.sleep(3)
                 engine.setProperty("rate", 120)
                 speak('According to me, you are gem of a person. I seriously like you because you creat me. In this photo you look great, always remember that. I hope your all dreams comes true one by one,')
-
-            elif 'ketan' in miss:
-                os.startfile(os.path.join(pic, foto[12]))
-                time.sleep(3)
-                engine.setProperty("rate", 120)
-                speak('According to me, ketan is a gentlemen. He has pure heart and always dedicated towards his career. Though his photos are not good sometimes but i definately say that he has dashing personality ')
-
-            elif 'ron' in miss:
-                os.startfile(os.path.join(pic, foto[26]))
-                time.sleep(3)
-                engine.setProperty("rate", 120)
-                speak('According to me, ronak is very clever and silent guy. He done things very smoothly. He has very deep emotional intelligence. Though his silent made other person frustrated sometimes but he always loved by everyone.')
-
-            elif 'aman' in miss:
-                os.startfile(os.path.join(pic, foto[1]))
-                time.sleep(3)
-                engine.setProperty("rate", 120)
-                speak('According to me, aman is emotional and dedicated towards his family. His photos always like original gangster type. He is mentally strong and deep conversation type person.')
+                
 #you can add many pics at this way...please match name and pic number.
             else:
                 os.startfile(os.path.join(pic, foto[18]))
