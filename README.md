@@ -1,5 +1,5 @@
 # jasmin-desktop
-Self Assesment project.
+Self Learning project.
 
 This project is for windows and called personal assistant for your pc.
 
